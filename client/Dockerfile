@@ -4,8 +4,8 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY yarn.lock ./
-RUN yarn install
+RUN npm install
 COPY src src
 COPY public public
 
-CMD ["yarn", "start"]
+CMD npm start
